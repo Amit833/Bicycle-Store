@@ -1,13 +1,372 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  min-height: 100vh;
+  background-color: darkslategray;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  width: 600px;
+  height: 400px;
+}
+/************ HEADER ******************** */
+header {
+  height: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  color: brown;
+  background: url(./assets/c6.jpg) no-repeat bottom 0 right 0 / cover;
+}
+.logo,
+.user-status-block {
+  width: fit-content;
+  padding: 2rem;
+  background-color: darkslategrey;
+  /* text-shadow: 0 0 5px #ffffff; */
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+}
+.logo h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: beige;
+}
+.logo p {
+  color: #fdfdfd;
+  text-shadow: 0 0 1px rgba(253, 253, 253, 0.8);
+}
+.user-status-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-status-block h3 {
+  color: aliceblue;
+}
+.user-status-block h4 {
+  color: #fdfdfd;
+}
+.user-status-block a {
+  display: flex;
+  width: fit-content;
+  color: rgb(223, 86, 86);
+}
+.user-status-block a p {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-weight: 600;
+  background-color: #fdfdfd;
+  color: red;
+  text-shadow: none;
+  border-radius: 10px;
+}
+.basket-icon {
+  font-size: 5rem;
+}
+.basket-icon:hover {
+  color: #fdfdfd;
+  transform: scale(1.1);
+  transition: 0.4s;
+  text-shadow: 0 0 5px #fdfdfd;
+}
+/***************** LOGIN PAGE *****************/
+.login-section {
+  width: 40%;
+  margin: 6.1rem auto;
+  padding: 4rem 10rem;
+  color: #fdfdfd;
+  background-color: darkcyan;
+  border-radius: 25px;
+}
+.login-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: rgb(63, 61, 61);
+  text-align: center;
+}
+.login-section form {
+  display: flex;
+  flex-direction: column;
+}
+.login-section form input {
+  height: 4rem;
+  margin: 0.3rem 0 1rem 0;
+  padding-left: 1rem;
+  font-size: 1em;
+  font-weight: 600;
+  color: rgb(63, 61, 61);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.login-section button,
+.products-bike button,
+.bike button,
+.bike-container button,
+.total-price button,
+.navigate-btn {
+  align-self: flex-end;
+  width: 10rem;
+  height: 3.5rem;
+  margin: 1rem 0;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: rgb(63, 61, 61);
+  color: #fdfdfd;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-section button:hover,
+.products-bike button:hover,
+.bike button:hover,
+.bike-container button:hover,
+.total-price button:hover,
+.navigate-btn:hover {
+  background-color: orangered;
+  transform: scale(1.04);
+  transition: 0.4s;
+}
+.login-section p,
+.login-section h4 {
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+.login-section p:hover,
+.login-section h4:hover {
+  text-decoration: underline;
+}
+/******************** PRODUCTS PAGE *************/
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  padding: 10rem;
+  background-color: darkslategray;
+}
+.products-bike,
+.bike-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+}
+.products-bike h3,
+.bike-container h2 {
+  padding: 2rem 4rem;
+}
+.products-bike img {
+  width: 100%;
+}
+.products-bike div,
+.bike div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+.products-bike button,
+.bike-container button {
+  width: 15rem;
+  height: 4rem;
+  margin: 0;
+  font-size: 1em;
+}
+/****************** BIKE PAGE ************/
+
+.bike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  background-color: darkslategray;
+}
+.bike a {
+  align-self: flex-start;
+}
+.bike a button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23rem;
+  margin-bottom: 5rem;
+}
+.bike a button svg {
+  margin-right: 1rem;
+}
+.bike-container {
+  background-color: #fdfdfd;
+}
+.bike details {
+  margin-bottom: 2rem;
+}
+.bike details ul {
+  margin-top: 1rem;
+  list-style: none;
+}
+.bike details ul li {
+  margin-bottom: 1rem;
+}
+/***************** SHOPPING BASKET ***********/
+.shopping-basket-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  background-color: darkslategray;
+}
+.basket-item {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  background-color: #fdfdfd;
+}
+.basket-item svg {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.basket-item svg:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.basket-item img {
+  width: 15%;
+  height: 15%;
+  padding: 0;
+}
+.item-id-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.item-id-wrapper p:first-child {
+  font-weight: 600;
+}
+.item-id-wrapper p:last-child {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.quantity-wrapper {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4rem;
+  font-weight: 600;
+}
+.quantity-wrapper div {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.quantity-wrapper div > * {
+  margin: 0rem 0.5rem;
+}
+
+.item-total {
+  margin-right: 20px;
+}
+
+.total-price {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fdfdfd;
+}
+.total-price > * {
+  margin-bottom: 2rem;
+  text-align: right;
+}
+.total-price a {
+  margin: 0;
+}
+/******************* ORDER CONFIRMATION ************/
+.order-confirmation {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: darkslategray;
+}
+.order-confirmation div {
+  padding: 2rem 1rem 4rem 1rem;
+  font-size: 2rem;
+  background-color: #fdfdfd;
+  text-align: center;
+  border-radius: 25px;
+}
+.order-confirmation p {
+  padding: 2rem;
+}
+.order-confirmation p:last-child {
+  font-size: 3rem;
+}
+/**************** PAGE NOT FOUND ************/
+.order-confirmation h1 {
+  padding: 5rem;
+  background-color: #fdfdfd;
+  color: orangered;
+}
+/**************** FOOTER ***************/
+.footer-initial {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 2rem 5rem;
+  font-size: 2.5rem;
+}
+.footer-logged {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 2rem 5rem;
+  font-size: 2.5rem;
+}
+footer p {
+  flex-grow: 1;
+}
+.footer-icon {
+  margin: 1rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.footer-icon:hover {
+  color: orangered;
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+.hide {
+  display: none;
 }
